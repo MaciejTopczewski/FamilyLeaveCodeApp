@@ -1,0 +1,107 @@
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  height: 56px;
+  background-color: #2e2e38;
+  border-bottom: 3px solid #ffe600;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.top-bar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffe600;
+  letter-spacing: 2px;
+}
+
+.top-bar-divider {
+  width: 1px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.top-bar-app-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.top-bar-hr-button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: 1px solid rgba(255, 230, 0, 0.4);
+  color: #ffe600;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.top-bar-hr-button:hover {
+  background: rgba(255, 230, 0, 0.1);
+  border-color: #ffe600;
+}
+
+.hr-button-text {
+  font-size: 0.8rem;
+}
+
+.top-bar-user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #ffe600;
+  color: #2e2e38;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.user-name {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .top-bar-app-name,
+  .hr-button-text,
+  .user-name {
+    display: none;
+  }
+
+  .top-bar {
+    padding: 0 1rem;
+  }
+}
