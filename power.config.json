@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "appId": "65696663-28d6-496d-a31a-49ec87f755af",
+  "appDisplayName": "Family Leave - Code App",
+  "region": "prod",
+  "environmentId": "fc14c9a3-e9f6-e2ad-ad08-155f72bc9841",
+  "description": " ",
+  "buildPath": "./dist",
+  "buildEntryPoint": "index.html",
+  "localAppUrl": "http://localhost:3000",
+  "logoPath": "Default",
+  "connectionReferences": {},
+  "databaseReferences": {}
+}
