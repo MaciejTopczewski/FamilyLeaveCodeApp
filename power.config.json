@@ -25,6 +25,22 @@
         "office365"
       ],
       "dataSets": {}
+    },
+    "15739742-a8b2-4db0-be71-b9d9a3badd8f": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+      "displayName": "SharePoint",
+      "dataSources": [
+        "ireland_holidays"
+      ],
+      "dataSets": {
+        "https://sites.ey.com/sites/EYIrelandAutomationBackend": {
+          "dataSources": {
+            "ireland_holidays": {
+              "tableName": "e2192921-21d8-4917-85de-d548d10359b7"
+            }
+          }
+        }
+      }
     }
   },
   "databaseReferences": {}

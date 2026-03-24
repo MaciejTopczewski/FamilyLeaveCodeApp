@@ -4,9 +4,12 @@
  */
 
 // Models
+export * as CommonModels from './models/CommonModels';
+export * as Ireland_HolidaysModel from './models/Ireland_HolidaysModel';
 export * as Office365OutlookModel from './models/Office365OutlookModel';
 export * as Office365UsersModel from './models/Office365UsersModel';
 
 // Services
+export * from './services/Ireland_HolidaysService';
 export * from './services/Office365OutlookService';
 export * from './services/Office365UsersService';
