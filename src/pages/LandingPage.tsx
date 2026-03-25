@@ -87,9 +87,9 @@ function LandingPage() {
             </button>
             <button
               className="ey-button secondary"
-              onClick={() => navigate("/counter")}
+              onClick={() => navigate("/resources")}
             >
-              Counter Demo
+              Resources
             </button>
           </div>
         </div>
