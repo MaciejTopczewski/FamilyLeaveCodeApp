@@ -94,8 +94,9 @@ function getHolidaysInRange(
 }
 
 function daysBetween(start: Date, end: Date): number {
-  const ms = end.getTime() - start.getTime();
-  return Math.round(ms / (1000 * 60 * 60 * 24));
+  const s = new Date(start.getFullYear(), start.getMonth(), start.getDate());
+  const e = new Date(end.getFullYear(), end.getMonth(), end.getDate());
+  return Math.round((e.getTime() - s.getTime()) / (1000 * 60 * 60 * 24));
 }
 
 function countWorkingDaysInRange(
@@ -180,11 +181,20 @@ export function calculateLeave(
   let holidaysInPeriod = getHolidaysInRange(leaveStart, leaveEnd, holidays);
   let prevCount = 0;
 
-  // Iteratively extend for public holidays until stable
+  // Iteratively extend for public holidays — each holiday gives 1 extra working day
   while (holidaysInPeriod.length > prevCount) {
     const newHolidayCount = holidaysInPeriod.length - prevCount;
     prevCount = holidaysInPeriod.length;
-    leaveEnd = addCalendarDays(leaveEnd, newHolidayCount);
+    // Extend by working days (skip weekends and holidays already accounted for)
+    let daysToAdd = newHolidayCount;
+    let ext = new Date(leaveEnd);
+    while (daysToAdd > 0) {
+      ext = addCalendarDays(ext, 1);
+      if (!isWeekend(ext) && !isHoliday(ext, holidays)) {
+        daysToAdd--;
+      }
+    }
+    leaveEnd = ext;
     holidaysInPeriod = getHolidaysInRange(leaveStart, leaveEnd, holidays);
   }
 

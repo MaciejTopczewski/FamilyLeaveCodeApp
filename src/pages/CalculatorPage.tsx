@@ -256,18 +256,21 @@ function CalculatorPage() {
         Importance: "Normal",
       });
 
+      const toDateStr = (d: Date) =>
+        `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}T12:00:00.000Z`;
+
       FamilyLeavePlanner_CodeApp_RequestsService.create({
         Title: `${senderName} - ${typeLabel}`,
         RequestedBy: senderEmail,
         LeaveType: typeLabel,
-        LeaveStartDate: result.leaveStartDate.toISOString(),
-        EstimatedDueDate: leaveType === "maternity" && dueDate ? new Date(dueDate).toISOString() : undefined,
+        LeaveStartDate: toDateStr(result.leaveStartDate),
+        EstimatedDueDate: leaveType === "maternity" && dueDate ? toDateStr(new Date(dueDate)) : undefined,
         LeaveDurationWeeks: leaveType === "paternity" ? 2 : durationWeeks,
         AddUnpaidMatLeaveWeeks: leaveType === "maternity" && addUnpaidMaternity ? unpaidMaternityWeeks : 0,
         ParentsLeaveWeeks: addParentsLeave ? String(parentsLeaveWeeks) : "0",
         AnnualLeaveDays: annualLeaveDays,
         PublicHolidaysDuringLeave: result.publicHolidaysInPeriod.length,
-        ExpectedReturnDate: result.expectedReturnDate.toISOString(),
+        ExpectedReturnDate: toDateStr(result.expectedReturnDate),
       }).catch(() => {});
 
       setSendStatus("success");
