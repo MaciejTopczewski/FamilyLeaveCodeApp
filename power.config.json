@@ -30,13 +30,21 @@
       "id": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
       "displayName": "SharePoint",
       "dataSources": [
-        "ireland_holidays"
+        "ireland_holidays",
+        "familyleaveplanner_codeapp_requests",
+        "familyleaveplanner_codeapp_signins"
       ],
       "dataSets": {
         "https://sites.ey.com/sites/EYIrelandAutomationBackend": {
           "dataSources": {
             "ireland_holidays": {
               "tableName": "e2192921-21d8-4917-85de-d548d10359b7"
+            },
+            "familyleaveplanner_codeapp_requests": {
+              "tableName": "d94c664d-fc2b-4364-bbec-fde9289e98be"
+            },
+            "familyleaveplanner_codeapp_signins": {
+              "tableName": "a26f7b71-c9d2-43e9-bc4f-3e99cb54fa70"
             }
           }
         }

@@ -7,6 +7,7 @@ import { fetchHolidays, IRISH_PUBLIC_HOLIDAYS } from "../utils/holidays";
 import { Office365OutlookService } from "../generated/services/Office365OutlookService";
 import { Office365UsersService } from "../generated/services/Office365UsersService";
 import InfoTooltip from "../components/InfoTooltip";
+import { FamilyLeavePlanner_CodeApp_RequestsService } from "../generated/services/FamilyLeavePlanner_CodeApp_RequestsService";
 import "./CalculatorPage.css";
 
 const HR_EMAIL = "maciej.topczewski@gds.ey.com";
@@ -254,6 +255,21 @@ function CalculatorPage() {
         ),
         Importance: "Normal",
       });
+
+      FamilyLeavePlanner_CodeApp_RequestsService.create({
+        Title: `${senderName} - ${typeLabel}`,
+        RequestedBy: senderEmail,
+        LeaveType: typeLabel,
+        LeaveStartDate: result.leaveStartDate.toISOString(),
+        EstimatedDueDate: leaveType === "maternity" && dueDate ? new Date(dueDate).toISOString() : undefined,
+        LeaveDurationWeeks: leaveType === "paternity" ? 2 : durationWeeks,
+        AddUnpaidMatLeaveWeeks: leaveType === "maternity" && addUnpaidMaternity ? unpaidMaternityWeeks : 0,
+        ParentsLeaveWeeks: addParentsLeave ? String(parentsLeaveWeeks) : "0",
+        AnnualLeaveDays: annualLeaveDays,
+        PublicHolidaysDuringLeave: result.publicHolidaysInPeriod.length,
+        ExpectedReturnDate: result.expectedReturnDate.toISOString(),
+      }).catch(() => {});
+
       setSendStatus("success");
     } catch {
       setSendStatus("error");
