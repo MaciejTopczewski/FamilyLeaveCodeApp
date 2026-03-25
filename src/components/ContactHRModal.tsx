@@ -25,12 +25,12 @@ function buildEmailHtml(message: string, sender: SenderInfo): string {
   <div style="background-color:#2E2E38;padding:24px 32px;border-bottom:4px solid #FFE600;">
     <span style="color:#FFE600;font-size:24px;font-weight:700;letter-spacing:2px;">EY</span>
     <span style="color:rgba(255,255,255,0.4);margin:0 12px;">|</span>
-    <span style="color:rgba(255,255,255,0.8);font-size:14px;">Family Leave Calculator</span>
+    <span style="color:rgba(255,255,255,0.8);font-size:14px;">Family Leave Planner</span>
   </div>
   <div style="background-color:#ffffff;padding:32px;border:1px solid #e0e0e0;border-top:none;">
     <h2 style="color:#2E2E38;font-size:18px;margin:0 0 8px;font-weight:600;">Family Leave Enquiry</h2>
     <p style="color:#6C6C6C;font-size:13px;margin:0 0 20px;border-bottom:1px solid #eee;padding-bottom:16px;">
-      This message was sent via the Family Leave Calculator app.
+      This message was sent via the Family Leave Planner app.
     </p>
     <table style="width:100%;border-collapse:collapse;margin-bottom:24px;background-color:#FAFAFA;border:1px solid #eee;border-radius:4px;" cellpadding="0" cellspacing="0">
       <tr>
@@ -61,7 +61,7 @@ function buildEmailHtml(message: string, sender: SenderInfo): string {
   </div>
   <div style="background-color:#F5F5F5;padding:16px 32px;border:1px solid #e0e0e0;border-top:none;border-radius:0 0 4px 4px;">
     <p style="color:#999;font-size:11px;margin:0;line-height:1.5;">
-      This is an automated message from the EY Family Leave Calculator.
+      This is an automated message from the EY Family Leave Planner.
       To respond to this enquiry, please reply directly to the sender at <a href="mailto:${sender.email}" style="color:#999;">${sender.email}</a>.
     </p>
   </div>

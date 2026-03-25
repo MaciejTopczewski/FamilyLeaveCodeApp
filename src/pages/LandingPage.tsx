@@ -47,7 +47,7 @@ function LandingPage() {
             </div>
           </div>
 
-          <h1 className="landing-title">Family Leave Calculator</h1>
+          <h1 className="landing-title">Family Leave Planner</h1>
 
           <div className="landing-description">
             <p className="welcome-text">
@@ -83,7 +83,7 @@ function LandingPage() {
               className="ey-button primary"
               onClick={() => navigate("/calculator")}
             >
-              Open Calculator
+              Open Planner
             </button>
             <button
               className="ey-button secondary"

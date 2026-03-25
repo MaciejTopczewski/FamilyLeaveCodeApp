@@ -24,7 +24,7 @@ function TopBar() {
         <div className="top-bar-left">
           <span className="top-bar-logo">EY</span>
           <span className="top-bar-divider"></span>
-          <span className="top-bar-app-name">Family Leave Calculator</span>
+          <span className="top-bar-app-name">Family Leave Planner</span>
         </div>
         <div className="top-bar-right">
           <button
