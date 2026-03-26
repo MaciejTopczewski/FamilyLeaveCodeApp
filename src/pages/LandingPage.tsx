@@ -87,6 +87,12 @@ function LandingPage() {
             </button>
             <button
               className="ey-button secondary"
+              onClick={() => navigate("/copilot")}
+            >
+              Ask Policy Agent
+            </button>
+            <button
+              className="ey-button secondary"
               onClick={() => navigate("/resources")}
             >
               Resources

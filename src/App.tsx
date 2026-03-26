@@ -3,6 +3,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import CalculatorPage from "./pages/CalculatorPage";
 import ResourcesPage from "./pages/ResourcesPage";
+import CopilotPage from "./pages/CopilotPage";
 import { Office365UsersService } from "./generated/services/Office365UsersService";
 import { FamilyLeavePlanner_CodeApp_SignInsService } from "./generated/services/FamilyLeavePlanner_CodeApp_SignInsService";
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/calculator" element={<CalculatorPage />} />
         <Route path="/resources" element={<ResourcesPage />} />
+        <Route path="/copilot" element={<CopilotPage />} />
       </Routes>
     </HashRouter>
   );

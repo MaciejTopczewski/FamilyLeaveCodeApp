@@ -1,0 +1,103 @@
+.copilot-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(160deg, #2e2e38 0%, #1a1a24 50%, #2e2e38 100%);
+  color: #ffffff;
+  font-family: "EYInterstate", system-ui, -apple-system, sans-serif;
+}
+
+.copilot-main {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.copilot-container {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.copilot-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffe600;
+  margin: 0 0 0.5rem;
+}
+
+.copilot-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+}
+
+.copilot-chat-wrapper {
+  flex: 1;
+  min-height: 500px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.copilot-loading {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.loading-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(255, 230, 0, 0.2);
+  border-top-color: #ffe600;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.copilot-error {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.error-detail {
+  font-size: 0.8rem;
+  color: rgba(255, 68, 68, 0.8);
+  font-family: monospace;
+}
+
+.copilot-chat-wrapper > div[role="complementary"],
+.copilot-chat-wrapper > div {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .copilot-title {
+    font-size: 1.5rem;
+  }
+
+  .copilot-chat-wrapper {
+    min-height: 400px;
+  }
+}
