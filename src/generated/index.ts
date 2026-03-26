@@ -8,6 +8,7 @@ export * as CommonModels from './models/CommonModels';
 export * as FamilyLeavePlanner_CodeApp_RequestsModel from './models/FamilyLeavePlanner_CodeApp_RequestsModel';
 export * as FamilyLeavePlanner_CodeApp_SignInsModel from './models/FamilyLeavePlanner_CodeApp_SignInsModel';
 export * as Ireland_HolidaysModel from './models/Ireland_HolidaysModel';
+export * as MicrosoftCopilotStudioModel from './models/MicrosoftCopilotStudioModel';
 export * as Office365OutlookModel from './models/Office365OutlookModel';
 export * as Office365UsersModel from './models/Office365UsersModel';
 
@@ -15,5 +16,6 @@ export * as Office365UsersModel from './models/Office365UsersModel';
 export * from './services/FamilyLeavePlanner_CodeApp_RequestsService';
 export * from './services/FamilyLeavePlanner_CodeApp_SignInsService';
 export * from './services/Ireland_HolidaysService';
+export * from './services/MicrosoftCopilotStudioService';
 export * from './services/Office365OutlookService';
 export * from './services/Office365UsersService';

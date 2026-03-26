@@ -49,6 +49,14 @@
           }
         }
       }
+    },
+    "095ee52c-c5fe-43d8-bd1c-bed7184886a5": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_microsoftcopilotstudio",
+      "displayName": "Microsoft Copilot Studio",
+      "dataSources": [
+        "microsoftcopilotstudio"
+      ],
+      "dataSets": {}
     }
   },
   "databaseReferences": {}
