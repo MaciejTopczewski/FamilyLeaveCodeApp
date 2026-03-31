@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Office365UsersService } from "../generated/services/Office365UsersService";
 import ContactHRModal from "./ContactHRModal";
+import eyLogo from "../assets/ey-logo-beam-dark.png";
 import "./TopBar.css";
 
 function TopBar() {
@@ -22,7 +23,7 @@ function TopBar() {
     <>
       <div className="top-bar">
         <div className="top-bar-left">
-          <img src="/ey-logo-beam-dark.png" alt="EY" className="top-bar-logo-img" />
+          <img src={eyLogo} alt="EY" className="top-bar-logo-img" />
           <span className="top-bar-divider"></span>
           <span className="top-bar-app-name">Family Leave Planner</span>
         </div>
