@@ -22,7 +22,7 @@ function TopBar() {
     <>
       <div className="top-bar">
         <div className="top-bar-left">
-          <span className="top-bar-logo">EY</span>
+          <img src="/ey-logo-beam-dark.png" alt="EY" className="top-bar-logo-img" />
           <span className="top-bar-divider"></span>
           <span className="top-bar-app-name">Family Leave Planner</span>
         </div>

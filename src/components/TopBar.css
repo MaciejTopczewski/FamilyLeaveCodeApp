@@ -17,11 +17,10 @@
   gap: 0.75rem;
 }
 
-.top-bar-logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #ffe600;
-  letter-spacing: 2px;
+.top-bar-logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
 }
 
 .top-bar-divider {
